@@ -6,8 +6,10 @@ $_Connexion = new Connexion;
 
 
 if($nav=="index"){
-
 $titre = "connexion";   
+}else{
+    $titre ="Mot de passe oublié ?";
+}
 
 if (!empty($_POST)) {
         extract($_POST);
@@ -15,7 +17,7 @@ if (!empty($_POST)) {
             [$err_email, $err_password] = $_Connexion->verification_connexion($email, $password);
         }
     }
-}
+
 
 
 
@@ -26,11 +28,11 @@ include("./view/metas.php");
 include("./view/header.php");
 
 if (!isset($_SESSION["user"]["IdCollab"])) {
-    include("./view/forms.php");
+    include(VIEW . "/forms.php");
 }
 
 if (isset($_SESSION["user"]["IdCollab"])) {
-    include("./view/menu.php");
+    include(VIEW ."/menu.php");
 }
 
-include("./view/footer.php");
+include( VIEW . "/footer.php");
