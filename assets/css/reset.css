@@ -1,0 +1,57 @@
+/* CSS DOCUMENTS */
+
+/* Fichier de réinitialisation des paramètres par défaut du navigateur */
+html,
+body,
+main {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+footer,
+header,
+blockquote,
+pre,
+a,
+img,
+span,
+section,
+article {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+section,
+nav,
+menu,
+aside,
+article {
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+} 
