@@ -44,7 +44,7 @@
                 <?php if ($nav == "index") : ?>
                     <a href="reset.php" class="resetPass float-end mt-5"> mot de passe oublié ?</a>
                 <?php elseif ($nav == "reset") : ?>
-                    <a href="index.php" class="resetPass float-end mt-5">Retour à l'écran de connexion</a>
+                    <a href="home" class="resetPass float-end mt-5">Retour à l'écran de connexion</a>
                 
                 <?php endif; ?>
                 </form>

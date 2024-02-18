@@ -1,5 +1,8 @@
 <?php
 
+include("./_session.php");
+include("./controller/_functions/filtres.php");
+include("./controller/_classes/connexion.php");
 
 
 $_Connexion = new Connexion;
@@ -17,8 +20,6 @@ if (!empty($_POST)) {
             [$err_email, $err_password] = $_Connexion->verification_connexion($email, $password);
         }
     }
-
-
 
 
 echo $nav;
