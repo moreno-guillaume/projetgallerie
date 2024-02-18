@@ -8,11 +8,8 @@ include("./controller/_classes/connexion.php");
 $_Connexion = new Connexion;
 
 
-if($nav=="index"){
+
 $titre = "connexion";   
-}else{
-    $titre ="Mot de passe oublié ?";
-}
 
 if (!empty($_POST)) {
         extract($_POST);
