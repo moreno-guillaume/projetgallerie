@@ -1,13 +1,17 @@
 <?php
 
+
+
+class Home {
+
+public function showHome($nav){
+
 include("./_session.php");
 include("./controller/_functions/filtres.php");
 include("./controller/_classes/connexion.php");
 
 
 $_Connexion = new Connexion;
-
-
 
 $titre = "connexion";   
 
@@ -18,10 +22,8 @@ if (!empty($_POST)) {
         }
     }
 
-
 echo $nav;
 
- 
 include("./view/metas.php");
 include("./view/header.php");
 
@@ -34,3 +36,7 @@ if (isset($_SESSION["user"]["IdCollab"])) {
 }
 
 include( VIEW . "/footer.php");
+  
+}
+
+}
