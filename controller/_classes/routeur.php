@@ -1,30 +1,43 @@
 <?php 
+
+
+include_once(CONTROLLER . "/Home.php");
+
+
 /**
  * Créé les routes, trouve les controllers,
  * déclare la variables $nav selon la requete
  */
 class Routeur {
 private $request;
-private $nav;
-private $routes = ["home" => "home", "reset" => "reset"];
+public $nav;
+private $routes = [
+    "home" => ["controller" => 'home', "method" => 'showHome', "nav" => 'index'], 
+    "reset" => ["controller" => 'home', "method" => 'showHome', "nav" => 'reset']
+            ];
 
 
-public function __construct($request, $page){
+public function __construct($request, $nav){
 
     $this->request = $request;
-    $this->nav = $page;
+    $this->nav = $nav;
+
 }
 
 public function renderController(){
 
     $request = $this->request;
-    $nav = $this->nav;
-    // echo $nav; exit;
+    
 
     if(key_exists($request, $this->routes)){
 
-    $controller = $this->routes[$request];
-    include(CONTROLLER . '/' . $controller . '.php');
+    $this->nav = $this->routes[$request]['nav'];
+
+    $controller = $this->routes[$request]['controller'];
+    $method = $this->routes[$request]['method'];
+  
+    $currenController = new $controller();
+    $currenController->$method($this->nav);
 }
 else{
 echo '404';
