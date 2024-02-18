@@ -1,5 +1,5 @@
 <?php
-class connexionBDD {
+class ConnexionBDD {
     private $host;
     private $name;
     private $user;
@@ -36,5 +36,5 @@ class connexionBDD {
     }
 }
 
-$DBB = new connexionBDD('localhost', 'pt7', 'root', '');
-$DB = $DBB->DB();
+// $DBB = new connexionBDD('localhost', 'pt7', 'root', '');
+// $DB = $DBB->DB();
