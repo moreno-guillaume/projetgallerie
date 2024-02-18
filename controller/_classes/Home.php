@@ -6,9 +6,9 @@ class Home {
 
 public function showHome($nav){
 
-include("./_session.php");
-include("./controller/_functions/filtres.php");
-include("./controller/_classes/connexion.php");
+// include("./_session.php");
+// include("./controller/_functions/filtres.php");
+// include("./controller/_classes/connexion.php");
 
 
 $_Connexion = new Connexion;
@@ -28,14 +28,14 @@ include("./view/metas.php");
 include("./view/header.php");
 
 if (!isset($_SESSION["user"]["IdCollab"])) {
-    include(VIEW . "/forms.php");
+    include(VIEW . "forms.php");
 }
 
 if (isset($_SESSION["user"]["IdCollab"])) {
-    include(VIEW ."/menu.php");
+    include(VIEW ."menu.php");
 }
 
-include( VIEW . "/footer.php");
+include( VIEW . "footer.php");
   
 }
 
