@@ -20,11 +20,12 @@ class MyAutoLoad
         define('CONTROLLER', ROOT . '/controller/');
         define('VIEW',  ROOT . '/view/');
         define('MODEL', ROOT . '/model/');
-        define('CLASSES', CONTROLLER . '_classes/');
+        define('CLASSES', ROOT . '/_classes/');
         // echo CLASSES; exit;
         // echo MODEL; exit;
 
         define('ASSETS', HOST . 'assets/');
+        //  echo ASSETS; exit;
     }
 
     public static function autoload($class){

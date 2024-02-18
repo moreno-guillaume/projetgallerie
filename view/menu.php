@@ -1,3 +1,4 @@
+<?php if(isset($_SESSION["user"]["IdCollab"])):?>
 <nav>
         <ul>
                 <li><a href="deconnexion.php">Deconnexion</a></li>
@@ -7,3 +8,4 @@
                 <li><a href="#"><img class="icon" src="./assets/img/icons/settings.svg" alt="Logo parametres">Parametres</a></li>
         </ul>
 </nav>
+<?php endif ;?>
