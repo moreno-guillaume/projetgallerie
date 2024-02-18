@@ -54,12 +54,13 @@
 >[IMPORTANT]
 >* Restructuration complète du projet en modèle MVC. Les chemins ne sont pas encore tous corrigés mais quelques réécritures ont été faites
 >Pour le moment la connexion et l'apparition des premiers formulaires connexion et reset se font sans accroche.
->.
+>.Réécriture complète de l'organisation du projet : POO
 
 ## Creations
 * fichier config.php qui déclare les variables $host et $root, permettant de définir les chemins d'accès des différents dossiers et fichiers,
 * Création d'un fichier htaccess pour la réécriture d'urls,
+* Création d'une fonction autoLoad qui permet de charger automatiquement les classes appelées sans necessiter d'include.
 
 ## Modifications
 * Appel des differents documents grâce aux HOST et ROOT
-* 
+  
