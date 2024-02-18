@@ -1,0 +1,28 @@
+
+#  Activation du moteur de réécriture de Apache (mod_rewrite)
+
+# Condtion déxécution de la requête à venir :
+# %{REQUEST_FILENAME} Apache fournit la variable contenant le chemin vers le fichier  demandé par le navigateur
+# !-f Verification de condition négative
+
+# RewriteRule indique une règle de réécriture à venir
+# ^ indique le début d'une chaine
+# (.+) capture n'importe quel caractere
+# $ Référence a tout ce qui a été captutré
+# QSL = Querry String Append. Permet de conserver l'url d'origine même après réecriture
+# L signifie que cette commande est la dernière à être exutée ( Last )
+
+
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php?r=$1 [QSL,L]
+
+
+
+# Comprendre : On active le moteur de réécriture Apache, 
+# puis on lui demande de réécrire les urls demandées par le navigateur, 
+# ( sans écraser les chemins d'accès )
+# à moins que celui-ci ne demande directement l'acccès à une url existante.
