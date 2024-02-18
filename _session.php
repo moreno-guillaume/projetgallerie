@@ -1,6 +1,5 @@
 
 <?php
-require_once './controller/_classes/_pdo.php';
 session_start();
 
 if (isset($_SESSION["user"]["IdCollab"])){
