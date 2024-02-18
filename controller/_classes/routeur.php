@@ -1,7 +1,7 @@
 <?php 
 
 
-include_once(CONTROLLER . "/Home.php");
+// include_once(CONTROLLER . "/Home.php");
 
 
 /**

@@ -36,7 +36,7 @@
                     </div>
                 <?php endif; ?>
 
-                <button type="submit" class="bouton-valider"  <?php if($nav =="index"):?>id="valider-connexion" name="connexion"<?php elseif($nav=="reset"):?> id="valider-reset" name="reset-password"<?php endif ;?>">
+                <button type="submit" class="bouton-valider"  <?php if($nav =="index"):?>id="valider-connexion" name="connexion"<?php elseif($nav=="reset"):?> id="valider-reset" name="reset-password"<?php endif ;?>>
                 <img src="assets/img/icons/valider.svg" alt="v" width="100%" height="100%">
                 </button>
               
