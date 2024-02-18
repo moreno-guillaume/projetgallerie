@@ -1,14 +1,21 @@
 <?php 
-class Connexion {
 
+//  $filtres = new Filtres();
+
+class Connexion {
+    
     private $valid;
     private $err_email;
     private $err_password;
+
     public function verification_connexion($email,$password){
 
   global $DB;
-    $email = filtres($email);
-    $password = filtres($password);
+
+  $filtres = new Filtres();
+
+    $email = $filtres->filtres($email);
+    $password = $filtres->filtres($password);
 
     $this->valid = true;
 
@@ -39,7 +46,8 @@ class Connexion {
                 "IdPoste" => $req_user['IdPoste']
             ];
 
-            header("location:index.php");
+            // header("location:index.php");
+            header("location:home");
         
         } else {
             $this->valid = false;
