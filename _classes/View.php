@@ -10,7 +10,7 @@ $this->template = $template;
 
 }
 
-public function render($titre,$nav){
+public function render($titre,$nav,$err_password,$err_email){
 
 $template = $this->template;
 

@@ -46,7 +46,6 @@ class Connexion {
                 "IdPoste" => $req_user['IdPoste']
             ];
 
-            // header("location:index.php");
             header("location:home");
         
         } else {
@@ -54,6 +53,8 @@ class Connexion {
             $this->err_password = "Email et / ou mot de passe incorrect";
         }
     }
+
     return [$this->err_email,$this->err_password];
+    
 }
 }
