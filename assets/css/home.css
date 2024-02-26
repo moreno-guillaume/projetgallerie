@@ -12,6 +12,12 @@
   --FONTTITLE: "Playfair", sans-serif;
   --FONTTEXT: "Montserrat", sans-serif;
   --CLEAR : #ffffff;
+  --BORDERS_BTN : [
+border-right: 3px solid var(--FONT-COLOR);
+border-bottom: 3px solid var(--FONT-COLOR);
+border-left: 3px solid var(--SECOND_COLOR);
+border-top: 3px solid var(--SECOND_COLOR);
+  ]
 }
 
 * {
@@ -62,13 +68,14 @@ background-position:  center center;
 
 /*-------------Boutons Valider------------- */
 .bouton-valider{
-position: absolute;
-background-color: var(--SECOND_COLOR);
-color: var(--BGCOLOR);
-width: 60px;
-height: 60px;
-border-radius: 10%;
+width: max-content;
+padding: 5px 15px;
+background-color: var(--CLEAR);
+color: var(--FONT-COLOR);
+border-radius: 2%;
 border: none;
+border-left: 2px solid var(--SECOND_COLOR);
+border-top: 2px solid var(--SECOND_COLOR);
 }
 #valider-connexion{
 top : 15%;
