@@ -10,10 +10,9 @@ $this->template = $template;
 
 }
 
-public function render($titre,$nav,$err_password,$err_email){
+public function render($titre,$nav,$err_data){
 
 $template = $this->template;
-
 ob_start();
 include(VIEW . $template . '.php');
 $contenuPage = ob_get_clean();
