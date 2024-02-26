@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Home {
 
 public function showHome($nav){
@@ -10,10 +8,7 @@ public function showHome($nav){
 
     $titre = "connexion";   
 
-    $myView = new View('Home');
-    $myView->render($titre,$nav);
-
-
+   
 
         if (!empty($_POST)) {
         extract($_POST);
@@ -22,7 +17,9 @@ public function showHome($nav){
             }
         }
 
-    echo $nav;
+ $myView = new View('Home');
+$myView->render($titre,$nav,$err_email, $err_password);
+  
 
 
     if (isset($_SESSION["user"]["IdCollab"])) {
