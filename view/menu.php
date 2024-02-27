@@ -6,7 +6,7 @@
                                         Expositions
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <a href="#" class="dropdown-item" type="button">Liste des Expos</a>
+                                        <a href="listeExpos" class="dropdown-item" type="button">Liste des Expos</a>
                                         <a href="#" class="dropdown-item" type="button">Creer une nouvelle Expo</a>
                                 </div>
                         </div>

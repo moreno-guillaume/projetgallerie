@@ -10,7 +10,7 @@ class Home
         if ($nav == "index") {
             $titre = "connexion";
         } elseif ($nav == "reset") {
-            $titre = "Réinitialisation du mot de passe";
+            $titre = "Réinitialisation";
         }
     
         $err_email = "";
@@ -23,12 +23,12 @@ class Home
     
         $myView = new View('Home');
     
-        $err_data = array(
+        $data = array(
             'err_email' => $err_email,
             'err_password' => $err_password
         );
     
-        $myView->render($titre, $nav, $err_data);
+        $myView->render($titre, $nav, $data);
     
         if (isset($_SESSION["user"]["IdCollab"])) {
             include(VIEW . "menu.php");
