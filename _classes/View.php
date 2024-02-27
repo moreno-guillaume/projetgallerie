@@ -10,15 +10,13 @@ $this->template = $template;
 
 }
 
-public function render($titre,$nav,$err_data){
+public function render($titre,$nav,$data){
 
 $template = $this->template;
 ob_start();
 include(VIEW . $template . '.php');
 $contenuPage = ob_get_clean();
 include_once (VIEW . '_gabarit.php');
-
-// include_once( VIEW . $template . '.php');
 
 }
 
