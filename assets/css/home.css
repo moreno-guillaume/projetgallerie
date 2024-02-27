@@ -35,12 +35,17 @@ body {
   overflow-y: scroll;  
 }
 header {
+  position: fixed;
   width: 100%;
   height: 8vh;
   background-color: var(--BGCOLOR);
   background-image: url("../img/logo.svg");
   background-position: center center;
   background-repeat: no-repeat;
+}
+main{
+  height: 87%;
+  margin-top: 13vh;
 }
 h3 {
   font-family: var(--FONTTITLE);
@@ -66,24 +71,27 @@ background-position:  center center;
   top: 10%;
 }
 
+/*-------------Titre------------- */
+.titre{
+  color: var(--SECOND_COLOR);
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+  font-weight: bolder;
+}
+.titre-var{
+  letter-spacing: .3rem;
+}
+
 /*-------------Boutons Valider------------- */
 .bouton-valider{
+float: right;
 width: max-content;
-padding: 5px 15px;
-background-color: var(--CLEAR);
+padding: 10px 15px;
+background-color: var(--BGCONTRAST);
 color: var(--FONT-COLOR);
 border-radius: 2%;
-border: none;
-border-left: 2px solid var(--SECOND_COLOR);
-border-top: 2px solid var(--SECOND_COLOR);
-}
-#valider-connexion{
-top : 15%;
-left: 90%;
-}
-#valider-reset{
-top: -50%;
-left: 90%;
+border: 1px solid var(--FONT-COLOR);
 }
 
 /*-------------menu------------- */
@@ -135,16 +143,18 @@ nav ul li a:hover {
 /*-------------connexion------------- */
 .form {
   color: var(--FONT-COLOR-LIGHT);
-  border-radius: 30px;
   border: none;
   padding: 5px;
-  background-color: var(--FONT-CONTRAST-DARK);
-}
-#connexion-form input {
-  width: 75%;
-}
+  background-color: var(--BGCOLOR);
+  border: 3px solid var(--BGCONTRAST);
 
-.text {
-  text-decoration: underline;
-  color: var(--FONT-COLOR-LIGHT);
+}
+.form-var{
+  border-top: 5px solid var(--SECOND_COLOR);
+  border-left: 5px solid var(--SECOND_COLOR);
+}
+#connexion-form input,
+#reset-password-form input {
+  width: 70%;
+  background-color: var(--CLEAR)!important;
 }

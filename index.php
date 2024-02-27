@@ -12,4 +12,3 @@ $DB = $DBB->DB();
 $routeur = new Routeur($request, "index");
 $routeur->renderController();
 
-// $connexion = new Connexion();
