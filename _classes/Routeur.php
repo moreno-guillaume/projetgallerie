@@ -13,7 +13,8 @@ private $request;
 public $nav;
 private $routes = [
     "home" => ["controller" => 'home', "method" => 'showHome', "nav" => 'index'], 
-    "reset" => ["controller" => 'home', "method" => 'showHome', "nav" => 'reset']
+    "reset" => ["controller" => 'home', "method" => 'showHome', "nav" => 'reset'],
+    "listeExpos" => ["controller" => 'read', "method"=> 'showList', "nav" => 'listeExpos']
             ];
 
 

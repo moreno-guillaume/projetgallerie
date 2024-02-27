@@ -16,8 +16,17 @@
 
 RewriteEngine On
 
+# Ne réécrire que si le fichier demandé n'existe pas
 RewriteCond %{REQUEST_FILENAME} !-f
+
+# Ne réécrire que si le fichier demandé n'est pas un répertoire
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Réécriture pour index.php
 RewriteRule ^(.+)$ index.php?r=$1 [QSL,L]
+
+# Ajoutez une règle supplémentaire pour réécrire votre nouvelle page.php
+RewriteRule ^projetgallerie2/liste-expos$ /projetgallerie2/liste-expos.php?r=liste-expos [QSL,L]
 
 
 

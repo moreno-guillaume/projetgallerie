@@ -1,35 +1,37 @@
 <?php
 
+class Home
+{
 
-
-class Home {
-
-public function showHome($nav){
-
-    $_Connexion = new Connexion;
-
-    $titre = "connexion";   
-
-    $myView = new View('Home');
-    $myView->render($titre,$nav);
-
-
-
-        if (!empty($_POST)) {
-        extract($_POST);
-            if (isset($_POST['connexion'])) {
-                [$err_email, $err_password] = $_Connexion->verification_connexion($email, $password);
-            }
+    public function showHome($nav)
+    {
+        $_Connexion = new Connexion;
+    
+        if ($nav == "index") {
+            $titre = "connexion";
+        } elseif ($nav == "reset") {
+            $titre = "Réinitialisation";
         }
-
-    echo $nav;
-
-
-    if (isset($_SESSION["user"]["IdCollab"])) {
-        include(VIEW ."menu.php");
+    
+        $err_email = "";
+        $err_password = "";
+    
+        if (isset($_POST['connexion'])) {
+            extract($_POST);
+            [$err_email, $err_password] = $_Connexion->verification_connexion($email, $password);
+        }
+    
+        $myView = new View('Home');
+    
+        $data = array(
+            'err_email' => $err_email,
+            'err_password' => $err_password
+        );
+    
+        $myView->render($titre, $nav, $data);
+    
+        if (isset($_SESSION["user"]["IdCollab"])) {
+            include(VIEW . "menu.php");
+        }
     }
-
-  
-    }
-
 }

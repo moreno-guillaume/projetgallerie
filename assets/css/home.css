@@ -11,6 +11,13 @@
   --DARK_COLOR: #8c1812;
   --FONTTITLE: "Playfair", sans-serif;
   --FONTTEXT: "Montserrat", sans-serif;
+  --CLEAR : #ffffff;
+  --BORDERS_BTN : [
+border-right: 3px solid var(--FONT-COLOR);
+border-bottom: 3px solid var(--FONT-COLOR);
+border-left: 3px solid var(--SECOND_COLOR);
+border-top: 3px solid var(--SECOND_COLOR);
+  ]
 }
 
 * {
@@ -21,21 +28,30 @@
 body {
   height: 100vh;
   width: 100vw;
-  background-color: var(--BGCOLOR);
+  background-color: var(--CLEAR);
   font-family: var(--FONTTEXT);
   color: var(--FONT-COLOR);
-  overflow: hidden;  
+  overflow-x: hidden;
+  overflow-y: scroll;  
 }
 header {
+  position: fixed;
   width: 100%;
-  height: 15vh;
+  height: 8vh;
+  background-color: var(--BGCOLOR);
+  background-image: url("../img/logo.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+main{
+  height: 87%;
+  margin-top: 13vh;
 }
 h3 {
   font-family: var(--FONTTITLE);
 }
 a{
   color: var(--FONT-COLOR-LIGHT);
-  text-decoration: underline;
   transition: all .3s ease-in-out;
 }
 a:hover{
@@ -55,68 +71,69 @@ background-position:  center center;
   top: 10%;
 }
 
+/*-------------Titre------------- */
+.titre{
+  color: var(--SECOND_COLOR);
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+  font-weight: bolder;
+}
+.titre-var{
+  letter-spacing: .3rem;
+}
+
 /*-------------Boutons Valider------------- */
 .bouton-valider{
-position: absolute;
-background-color: var(--SECOND_COLOR);
-color: var(--BGCOLOR);
-width: 60px;
-height: 60px;
-border-radius: 50%;
-border: none;
-}
-#valider-connexion{
-top : 15%;
-left: 90%;
-}
-#valider-reset{
-top: -50%;
-left: 90%;
+float: right;
+width: max-content;
+padding: 10px 15px;
+background-color: var(--BGCONTRAST);
+color: var(--FONT-COLOR);
+border-radius: 2%;
+border: 1px solid var(--FONT-COLOR);
 }
 
 /*-------------menu------------- */
 nav {
   position: fixed; 
-  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  top: 8vh;
   width: 100%;
-  height: 80px;
-  background-color: var(--BGCONTRAST);
+  height: 5vh;
+  background-color: var(--BGCOLOR);
   text-align: center;
   padding-top: 10px;
 }
 nav ul {
+   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0;
   padding: 0;     
-  width: 100%;
-  height: 100%;
 }
 nav ul li {
+  height: 100%;
   flex: 1; 
   display: flex; 
   justify-content: center;
   align-items: center;
   height: 100%;
 }
+nav ul#second-list li{
+  align-items: flex-end;
+}
 nav ul li a {
-  padding-top: 10px;
   height: 100%;
   color: var(--FONT-COLOR-LIGHT);
-  padding: 10px; 
+  padding : 0 20px 0 20px; 
+  align-items: center;
 }
-
 nav ul li a:hover {
   opacity: 70%;
 }
-.icon {
-  max-height: 30px;
-}
-nav ul li a:hover .icon {
-  fill: var(--SECOND_COLOR);
-}
-
 /*-------------Logo------------- */
 #logo {
   width: 22%;
@@ -126,16 +143,18 @@ nav ul li a:hover .icon {
 /*-------------connexion------------- */
 .form {
   color: var(--FONT-COLOR-LIGHT);
-  border-radius: 30px;
   border: none;
   padding: 5px;
-  background-color: var(--FONT-CONTRAST-DARK);
-}
-#connexion-form input {
-  width: 75%;
-}
+  background-color: var(--BGCOLOR);
+  border: 3px solid var(--BGCONTRAST);
 
-.text {
-  text-decoration: underline;
-  color: var(--FONT-COLOR-LIGHT);
+}
+.form-var{
+  border-top: 5px solid var(--SECOND_COLOR);
+  border-left: 5px solid var(--SECOND_COLOR);
+}
+#connexion-form input,
+#reset-password-form input {
+  width: 70%;
+  background-color: var(--CLEAR)!important;
 }
