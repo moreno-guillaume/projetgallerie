@@ -28,6 +28,8 @@ RewriteRule ^(.+)$ index.php?r=$1 [QSL,L]
 # Ajoutez une règle supplémentaire pour réécrire votre nouvelle page.php
 RewriteRule ^projetgallerie2/liste-expos$ /projetgallerie2/liste-expos.php?r=liste-expos [QSL,L]
 
+RewriteRule ^projetgallerie2/voir-expos$ /projetgallerie2/voir-expo.php?r=voir-expo [QSL,L]
+
 
 
 
