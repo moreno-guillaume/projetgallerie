@@ -18,7 +18,7 @@ private $DB;
         $req = $DB->prepare("SELECT e.*, se.LibelleStatutExpo AS LibelleStatut, te.LibelleThemeExpo AS LibelleTheme
         FROM exposition e
         JOIN statut_expo se ON e.IdStatutExpo = se.IdStatutExpo
-        JOIN theme_expo te ON e.IdThemeExpo = te.IdThemeExpo;; ");
+        JOIN theme_expo te ON e.IdThemeExpo = te.IdThemeExpo;");
         $req->execute();
 
         while($row=$req->fetch(PDO::FETCH_ASSOC)){

@@ -17,7 +17,7 @@
                                     <th>Statut</th>
                                     <th>Thème</th>
                                     <th>Voir / Modifier</th>
-                                    <th>Supprimer l'oeuvre</th>";
+                                    <th>Supprimer l'expo</th>";
                                 break;
                         }; ?>
                     </tr>
@@ -30,7 +30,7 @@
                                 <td><?php echo $exposition->getLibelle(); ?></td>
                                 <td><?php echo $exposition->getStatut(); ?></td>
                                 <td><?php echo $exposition->getTheme(); ?></td>
-                                <td><a href="voir-collab.php?id=<?php echo $exposition->getId(); ?>">Voir / modifier</a></td>
+                                <td><a href="voirExpo?id=<?php echo $exposition->getId(); ?>">Voir / modifier</a></td>
                                 <td><a href="#">Supprimer</a></td>
                             </tr>
                         <?php endforeach; };?>
