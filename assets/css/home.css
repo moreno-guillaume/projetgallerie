@@ -58,6 +58,12 @@ a:hover{
   color: var(--DARK_COLOR);
 }
 
+/*-------------grid------------- */
+.grid-3{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 /*-------------Welcome------------- */
 #welcome{
 margin-top: 10%;
@@ -157,4 +163,10 @@ nav ul li a:hover {
 #reset-password-form input {
   width: 70%;
   background-color: var(--CLEAR)!important;
+}
+
+/*-------------description------------- */
+.description{
+  width: 100%;
+  min-height : 300px;
 }
