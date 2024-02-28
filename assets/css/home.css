@@ -39,7 +39,7 @@ header {
   width: 100%;
   height: 8vh;
   background-color: var(--BGCOLOR);
-  background-image: url("../img/logo.svg");
+  /* background-image: url("../img/logo.svg"); */
   background-position: center center;
   background-repeat: no-repeat;
 }

@@ -10,6 +10,10 @@ class Read
             $titre = "Liste des expositions";
         }
 
+        if (isset($_SESSION["user"]["IdCollab"])) {
+            include(VIEW . "menu.php");
+        }
+
         $manager = new ExpositionManager();
         $expositions = $manager->findAll();
         $data = $expositions;
@@ -22,8 +26,6 @@ class Read
         $myView = new View('read');
         $myView->render($titre, $nav, $data);
 
-        if (isset($_SESSION["user"]["IdCollab"])) {
-            include(VIEW . "menu.php");
-        }
+        
     }
 }
