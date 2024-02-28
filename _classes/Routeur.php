@@ -19,7 +19,8 @@ private $routes = [
     "listeExpos" => ["controller" => 'Read', "method"=> 'showList', "nav" => 'listeExpos'],
     "listeOeuvres" => ["controller" => 'Read', "method" => 'showList', "nav" => 'listeOeuvres'],
 
-    "voirExpo" => ["controller" => 'Update', "method" => 'showItem', "nav" => 'voirExpo']
+    "voirExpo" => ["controller" => 'Update', "method" => 'showItem', "nav" => 'voirExpo'],
+    "voirOeuvre" => ["controller" => 'Update', "method" => 'showItem', "nav" => 'voirOeuvre']
     ];
 
 
