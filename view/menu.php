@@ -15,7 +15,7 @@
                                         Oeuvres
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <a href="#" class="dropdown-item" type="button">Liste des oeuvres</a>
+                                        <a href="listeOeuvres" class="dropdown-item" type="button">Liste des oeuvres</a>
                                         <a href="#" class="dropdown-item" type="button">Enregistrer une nouvelle oeuvre</a>
                                 </div>
                         </div>
