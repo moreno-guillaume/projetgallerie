@@ -12,10 +12,15 @@ class Routeur {
 private $request;
 public $nav;
 private $routes = [
+
     "home" => ["controller" => 'home', "method" => 'showHome', "nav" => 'index'], 
     "reset" => ["controller" => 'home', "method" => 'showHome', "nav" => 'reset'],
-    "listeExpos" => ["controller" => 'read', "method"=> 'showList', "nav" => 'listeExpos']
-            ];
+
+    "listeExpos" => ["controller" => 'Read', "method"=> 'showList', "nav" => 'listeExpos'],
+    "listeOeuvres" => ["controller" => 'Read', "method" => 'showList', "nav" => 'listeOeuvres'],
+
+    "voirExpo" => ["controller" => 'Update', "method" => 'showItem', "nav" => 'voirExpo']
+    ];
 
 
 public function __construct($request, $nav){
