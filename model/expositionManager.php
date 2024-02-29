@@ -6,7 +6,7 @@ private $DBB;
 private $DB;
     public function __construct(){
 
-    $this->DBB = new connexionBDD('localhost', 'pt7', 'root', '');
+    $this->DBB = new connexionBDD('localhost', 'projetgallerie', 'root', '');
     $this->DB = $this->DBB->DB();
     }
 
@@ -35,6 +35,7 @@ private $DB;
             $exposition->setStatut($row['LibelleStatut']);
             $exposition->setTheme($row['LibelleTheme']);
             $exposition->setPdf($row['IdPdf']);
+            $exposition->setImage($row['ImageExpo']);
 
             $expositions[] = $exposition;
             // var_dump($expositions); exit;

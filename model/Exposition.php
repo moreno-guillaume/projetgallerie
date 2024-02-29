@@ -12,8 +12,21 @@ class Exposition{
     private $statut;
     private $theme;
     private $pdf;
+    private $image;
 
   
+
+
+   // Setter pour $image
+   public function setImage($image) {
+    $this->image = $image;
+}
+
+// Getter pour $image
+public function getImage() {
+    return $this->image;
+}
+
    // Setter pour $id
    public function setId($id) {
     $this->id = $id;
@@ -24,7 +37,7 @@ public function getId() {
     return $this->id;
 }
 
-// Setter pour $libelle
+
 public function setLibelle($libelle) {
     $this->libelle = $libelle;
 }
