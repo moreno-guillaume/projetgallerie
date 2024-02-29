@@ -57,13 +57,20 @@ a{
 a:hover{
   color: var(--DARK_COLOR);
 }
+/*-------------hidden------------- */
+.hidden{
+  display: none;
+}
 
 /*-------------grid------------- */
 .grid-3{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
+/*-------------Fit------------- */
+.fit{
+  height: fit-content;
+}
 /*-------------Welcome------------- */
 #welcome{
 margin-top: 10%;
@@ -169,4 +176,10 @@ nav ul li a:hover {
 .description{
   width: 100%;
   min-height : 300px;
+}
+
+/*-------------img-container------------- */
+.img-container img{
+  max-height: 100%;
+  max-width: 100%;
 }
