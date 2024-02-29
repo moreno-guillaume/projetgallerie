@@ -29,6 +29,14 @@
                                         <th>Voir / Modifier</th>
                                         <th>Supprimer l'oeuvre</th>";
                                 break;
+                                case "listeArtistes":
+                                    echo "<th>Nom</th>
+                                            <th>Prenom</th>
+                                            <th>Activité : </th>
+                                            <th>Nationalité : </th>
+                                            <th>Voir / Modifier</th>
+                                            <th>Supprimer l'artiste</th>";
+                                break;
                         }; ?>
                     </tr>
                 </thead>
@@ -57,7 +65,18 @@
                                 <td><a href="#">Supprimer</a></td>
                             </tr>
                     <?php endforeach;
-                    }; ?>
+                    }elseif($nav=="listeArtistes"){
+
+                        foreach ($data as $artiste) : ?>
+                            <tr>
+                                <td><?php echo $artiste->getNom(); ?></td>
+                                <td class=""><?php echo $artiste->getPrenom(); ?></td>
+                                <td class=""><?php echo $artiste->getActivite(); ?></td>
+                                <td class=""><?php echo $artiste->getNationalite(); ?></td>
+                                <td><a href="voirArtiste?id=<?php echo $artiste->getId(); ?>">Voir / modifier</a></td>
+                                <td><a href="#">Supprimer</a></td>
+                            </tr>
+                    <?php endforeach; }?>
 
 
 
