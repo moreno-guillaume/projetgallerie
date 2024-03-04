@@ -25,7 +25,7 @@
                                         Artistes
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <a href="#" class="dropdown-item" type="button">Liste des artistes</a>
+                                        <a href="listeArtistes" class="dropdown-item" type="button">Liste des artistes</a>
                                         <a href="#" class="dropdown-item" type="button">Enregistrer un nouvel artiste</a>
                                 </div>
                         </div>

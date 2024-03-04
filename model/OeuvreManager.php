@@ -6,7 +6,7 @@ private $DBB;
 private $DB;
     public function __construct(){
 
-    $this->DBB = new connexionBDD('localhost', 'pt7', 'root', '');
+    $this->DBB = new connexionBDD('localhost', 'projetgallerie', 'root', '');
     $this->DB = $this->DBB->DB();
     }
 

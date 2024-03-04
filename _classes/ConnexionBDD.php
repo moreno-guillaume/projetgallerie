@@ -36,5 +36,5 @@ class ConnexionBDD {
     }
 }
 
-// $DBB = new connexionBDD('localhost', 'pt7', 'root', '');
+// $DBB = new connexionBDD('localhost', 'projetgallerie', 'root', '');
 // $DB = $DBB->DB();

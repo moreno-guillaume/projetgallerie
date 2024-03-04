@@ -12,8 +12,53 @@ class Exposition{
     private $statut;
     private $theme;
     private $pdf;
+    private $image;
 
-  
+    private $langueAllemand;
+    private $langueAnglais;
+    private $langueEspagnol;
+    private $plan;
+
+    public function setPlan($plan) {
+        $this->plan = $plan;
+    }
+
+     public function getPlan() {
+        return $this->plan;
+    }
+
+    public function setLangueAllemand($traduction) {
+        $this->langueAllemand = $traduction;
+    }
+
+     public function getLangueAllemand() {
+        return $this->langueAllemand;
+    }
+
+    public function setLangueAnglais($traduction) {
+        $this->langueAnglais = $traduction;
+    }
+public function getLangueAnglais() {
+        return $this->langueAnglais;
+    }
+    public function getLangueEspagnol() {
+        return $this->langueEspagnol;
+    }
+
+    public function setLangueEspagnol($traduction) {
+        $this->langueEspagnol = $traduction;
+    }
+
+   // Setter pour $image
+   public function setImage($image) {
+    $this->image = $image;
+}
+
+// Getter pour $image
+public function getImage() {
+    return $this->image;
+}
+
    // Setter pour $id
    public function setId($id) {
     $this->id = $id;
@@ -24,7 +69,7 @@ public function getId() {
     return $this->id;
 }
 
-// Setter pour $libelle
+
 public function setLibelle($libelle) {
     $this->libelle = $libelle;
 }
