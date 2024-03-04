@@ -53,9 +53,12 @@
                 </div>
                 <form class="" action="" method="post" <?php if ($nav == "index") : ?> id="connexion-form" <?php
                                                                                                         elseif ($nav == "reset") : ?> id="reset-password-form" <?php endif ?> class="position-relative">
+<p class="text-center">mail admin : admin@admin.admin</p>
+<p class="text-center">mdp admin : admin</p>
 
                     <div class=" mt-5 d-flex justify-content-between p-1">
                         <label for="email">Email utilisateur : </label>
+                        
                         <input type="text" name="email" id="email" class="text-center rounded border bg-transparent" placeholder="Email utilisateur">
                     </div>
 

@@ -96,6 +96,12 @@ background-position:  center center;
   letter-spacing: .3rem;
 }
 
+/*-------------Boutons fullscreen------------- */
+.bouton-fullscreen{
+  top: 5%;
+  left: 85%;
+}
+
 /*-------------Boutons Valider------------- */
 .bouton-valider{
 float: right;

@@ -14,8 +14,40 @@ class Exposition{
     private $pdf;
     private $image;
 
-  
+    private $langueAllemand;
+    private $langueAnglais;
+    private $langueEspagnol;
+    private $plan;
 
+    public function setPlan($plan) {
+        $this->plan = $plan;
+    }
+
+     public function getPlan() {
+        return $this->plan;
+    }
+
+    public function setLangueAllemand($traduction) {
+        $this->langueAllemand = $traduction;
+    }
+
+     public function getLangueAllemand() {
+        return $this->langueAllemand;
+    }
+
+    public function setLangueAnglais($traduction) {
+        $this->langueAnglais = $traduction;
+    }
+public function getLangueAnglais() {
+        return $this->langueAnglais;
+    }
+    public function getLangueEspagnol() {
+        return $this->langueEspagnol;
+    }
+
+    public function setLangueEspagnol($traduction) {
+        $this->langueEspagnol = $traduction;
+    }
 
    // Setter pour $image
    public function setImage($image) {
