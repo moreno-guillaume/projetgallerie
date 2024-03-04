@@ -10,7 +10,7 @@
  */
 class Routeur {
 private $request;
-public $nav;
+private $nav;
 private $routes = [
 
     "home" => ["controller" => 'home', "method" => 'showHome', "nav" => 'index'], 
