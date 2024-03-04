@@ -64,3 +64,38 @@
 ## Modifications
 * Appel des differents documents grâce aux HOST et ROOT
   
+
+
+
+# infos 04/03
+
+## Prochaine session
+
+* nettoyage des vues update.php et read.php en créant des includes.
+* définir projetgallerie2/home comme url d'accès dès l'entrée dans le dossier src
+* 
+
+### SUIVI ETUDIANT
+
+> .htaccess broken, l'accès à l'index.php se fait en ajoutant manuellement /home dans l'url.
+
+><strong>NB</strong>. Pages difficilement lisibles, includes en cours.
+
+> <u><strong>Problème ciblé :</strong></u>
+> depuis la nav : expositions -> liste des expos puis "voir/modifier"
+> diriger une requête AJAX ( présente dans la fonction JS showTraduction(language)) vers le controller de update.php ( ou ailleurs ?? )
+> Dans le but :
+>  *  d'accéder au (language) grâce à une variable php $language.
+>  *  de compléter le switch case présent dans la vue update.php
+> (voir form #formulaire-traducton -> textarea )
+
+> <u><strong>Objectif :</strong></u>
+> conditionner l'appartition d'une traduction présente en DB 
+> dans le textarea du formulaire en fonction de la nav ET du language selectionné.
+
+> <u><strong>Global</strong></u>
+> Une fois ce problème résolu, la transmission des variables 
+> entre M, V, et C sera encore mieux comprise et me permettra d'avancer
+> en autonomie sur le reste du projet.
+
+
